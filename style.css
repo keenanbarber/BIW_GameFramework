@@ -1,10 +1,10 @@
 body,
 html,
 div.board,
-div#react-container {
-  height: 100%;
+
+div#game_container {
   overflow: hidden;
-  background-color: white;
+  background-color: grey;
 }
 
 body {

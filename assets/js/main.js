@@ -13,3 +13,5 @@ var description = "";
 var userName = "Keenan"; 
 var userAttempts = 0; 
 var userScore = 0;
+var screenWidth = 600;
+var screenHeight = 450; 
