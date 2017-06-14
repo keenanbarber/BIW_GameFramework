@@ -6,10 +6,10 @@ game.state.add('Game', Game);
 game.state.add('Game_Over', Game_Over);
 
 // Initial State
-game.state.start('Menu');
+game.state.start('Game');
 
 // Game Information
 var description = "";
-var userName = ""; 
+var userName = "Keenan"; 
 var userAttempts = 0; 
 var userScore = 0;

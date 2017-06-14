@@ -1,0 +1,75 @@
+body,
+html,
+div.board,
+div#react-container {
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div.outer {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+
+div.title {
+  position: relative;
+  font-size: 22px;
+  left: 30px;
+  font-family: "Courier New";
+}
+
+div.outerShownPattern {
+  position: absolute;
+  font-size: 22px;
+  font-family: "Courier New";
+  text-align: center;
+
+  float: right;
+  width: 50px;
+  left: 132px;
+  top: 32px;
+
+  border-radius: 25px;
+  border: 1px solid grey;
+}
+
+div.buttonContainer {
+  position: relative;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .4);
+
+  border-radius: 25px;
+  border: 1px solid grey;
+  height: 40px;
+  width: 300px;
+  margin-right: -150px;
+}
+
+span.leftButton {
+  float: left;
+  margin: 9px 9px;
+  width: 80px;
+}
+
+span.leftButton > button{
+  width: 100px;
+}
+
+span.rightButtons {
+  float: right;
+  margin: 9px 9px;
+}
+
+button.buttonStyle {
+  background: white;
+  outline: none;
+  border-radius: 15px;
+}
+
+
