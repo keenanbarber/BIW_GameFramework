@@ -4,6 +4,13 @@ var Game = {
 	preload: function() {
 		game.load.image('block', './assets/images/snake.png');
 		game.load.image('brick', './assets/images/apple.png');
+
+		if (/Mobile|Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+		    console.log("This is running on a mobile device. ");
+		}
+		else {
+			console.log("This is not running on a mobile device. ");
+		}
 	}, 
 
 	create: function() {
@@ -26,7 +33,9 @@ var Game = {
 		textStyle = {
 			font: "bold 14px sans-serif", 
 			fill: "#46c0f9", 
-			align: "center"
+			align: "center", 
+			wordWrap: true, 
+			wordWrapWidth: 200
 		};
 
 		this.displayWelcomeText()
@@ -38,7 +47,10 @@ var Game = {
 
 	displayWelcomeText: function() {
 		let textToDisplay = "Hello " + userName + ", you have " + userAttempts.toString() + " attempts remaining. ";
-		welcomeText = game.add.text(90, 18, textToDisplay, textStyle); 
+		welcomeText = game.add.text(screenWidth/2, screenHeight/2, textToDisplay, textStyle); 
+		welcomeText.anchor.x = 0.5;
+		welcomeText.anchor.y = 0.5;
+		welcomeText.setShadow(3, 3, 'rgba(0,0,0,0.5)', 5);
 		this.colorText(welcomeText, 6, 11, '#ffffff', '#46c0f9');
 	},
  
