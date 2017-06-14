@@ -22,11 +22,11 @@ var Game = {
 		game.stage.backgroundColor = '#061f27'; 
 
 
-/*
+
     	button = game.add.button(game.world.centerX - 95, 400, 'brick', this.actionOnClick, this, 2, 1, 0);
 	    button.onInputOver.add(this.over, this);
 	    button.onInputOut.add(this.out, this);
-*/
+
 
 
 		// Add text to the top of the game.
@@ -43,6 +43,19 @@ var Game = {
 
 	update: function() {
 		
+	},
+
+	over: function() {
+		console.log("over");
+	},
+
+	out: function() {
+		console.log("out");
+	},
+
+	actionOnClick: function() {
+		console.log("click");
+		game.state.start('Game_Over');
 	},
 
 	displayWelcomeText: function() {
